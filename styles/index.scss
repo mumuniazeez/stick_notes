@@ -1,0 +1,150 @@
+$background-color: #b78304;
+$primary-color: #705000;
+$white: #ffffff;
+$font: 'Trebuchet MS';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: $background-color;
+    font-family: $font;
+}
+
+header{
+    width: 100%;
+    background-color: $primary-color;
+    display: flex;
+    justify-content: space-around;
+
+    .logo, .add-btn{
+        margin: 25px;
+        color: $white;
+    }
+
+    .add-btn{
+        button{
+            padding: 5px;
+            border: 2px solid $white;
+            border-radius: 5px;
+            background-color: $background-color;
+            font-family: $font;
+            font-size: 30pt;
+            color: $white;
+            cursor: pointer;
+            transition: all .5s ease;
+
+            &:hover{
+                background-color: $primary-color;
+            }
+        }
+    }
+}
+
+main{
+    margin: 50px;
+    .wrapper{
+        ul{
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(5, auto);
+            grid-template-rows: repeat(100, auto);
+
+            h1{
+                color: $white;
+                text-align: center;
+            }
+
+            .noteFromHTML{
+                list-style: none;
+                margin: 10px;
+
+                .title, .note-txt{
+                   input{
+                       width: 160px;
+                       height: 30px;
+                       margin: 5px;
+                       padding: .5em;
+                       font-weight: bold;
+                       font-family: $font;
+                       }
+                   }
+                   #noteInput{
+                    height: 60px;
+                    width: 150px;
+                    margin: 5px;
+                    padding: 1em;
+                    resize: none;
+                    font-weight: bold;
+                    font-family: $font;
+
+                }
+
+                button{
+                    background-color: $primary-color;
+                    color: $white;
+                    border: 2px solid $white;
+                    padding: .5em;
+                    width: 181px;
+                    margin-left: 5px;
+                    font-weight: bold;
+                    font-family: $font;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: all .5s ease;
+
+                    &:hover{
+                        background-color: $background-color;
+                    }
+                }
+            }
+
+            &:has(h1) {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+footer {
+    h3{
+        text-align: center;
+        color: $white;
+
+        a{
+            color: $white;     
+        }
+    }
+}
+
+@media screen and (max-width: 993px) {
+    main{
+        .wrapper{
+            ul{
+                grid-template-columns: repeat(3, auto);
+                justify-content: center;
+            }
+        }
+    }
+}
+@media screen and (max-width: 729px) {
+    main{
+        .wrapper{
+            ul{
+                grid-template-columns: repeat(2, auto);
+                justify-content: center;
+            }
+        }
+    }
+}
+@media screen and (max-width: 471px) {
+    main{
+        .wrapper{
+            ul{
+                grid-template-columns: repeat(1, auto);
+            }
+        }
+    }
+}

@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #b78304;
+  font-family: "Trebuchet MS";
+}
+
+header {
+  width: 100%;
+  background-color: #705000;
+  display: flex;
+  justify-content: space-around;
+}
+header .logo, header .add-btn {
+  margin: 25px;
+  color: #ffffff;
+}
+header .add-btn button {
+  padding: 5px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: #b78304;
+  font-family: "Trebuchet MS";
+  font-size: 30pt;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+header .add-btn button:hover {
+  background-color: #705000;
+}
+
+main {
+  margin: 50px;
+}
+main .wrapper ul {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: repeat(100, auto);
+}
+main .wrapper ul h1 {
+  color: #ffffff;
+  text-align: center;
+}
+main .wrapper ul .noteFromHTML {
+  list-style: none;
+  margin: 10px;
+}
+main .wrapper ul .noteFromHTML .title input, main .wrapper ul .noteFromHTML .note-txt input {
+  width: 160px;
+  height: 30px;
+  margin: 5px;
+  padding: 0.5em;
+  font-weight: bold;
+  font-family: "Trebuchet MS";
+}
+main .wrapper ul .noteFromHTML #noteInput {
+  height: 60px;
+  width: 150px;
+  margin: 5px;
+  padding: 1em;
+  resize: none;
+  font-weight: bold;
+  font-family: "Trebuchet MS";
+}
+main .wrapper ul .noteFromHTML button {
+  background-color: #705000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 0.5em;
+  width: 181px;
+  margin-left: 5px;
+  font-weight: bold;
+  font-family: "Trebuchet MS";
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+main .wrapper ul .noteFromHTML button:hover {
+  background-color: #b78304;
+}
+main .wrapper ul:has(h1) {
+  justify-content: center;
+}
+
+footer h3 {
+  text-align: center;
+  color: #ffffff;
+}
+footer h3 a {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 993px) {
+  main .wrapper ul {
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 729px) {
+  main .wrapper ul {
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 471px) {
+  main .wrapper ul {
+    grid-template-columns: repeat(1, auto);
+  }
+}/*# sourceMappingURL=index.css.map */
