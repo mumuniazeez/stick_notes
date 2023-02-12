@@ -18,6 +18,8 @@ header{
     background-color: $primary-color;
     display: flex;
     justify-content: space-around;
+    position: sticky;
+    top: 0;
 
     .logo, .add-btn{
         margin: 25px;
